@@ -24,6 +24,15 @@ class User_consultant(models.Model):
     id = models.BigAutoField(help_text="User ID", primary_key=True)
     login_id = models.CharField(max_length=32, unique=True, verbose_name='상담사 아이디')
     login_pw = models.CharField(max_length=128, verbose_name='상담사 비밀번호')
+    name = models.CharField(max_length=128, verbose_name='이름')
+    inst = models.CharField(max_length=128, verbose_name='소속기관')
+    phone = models.CharField(max_length=128, verbose_name='휴대폰')
+    email = models.CharField(max_length=128, verbose_name='이메일')
+    ckd1 = models.CharField(max_length=128, verbose_name='약관1')
+    ckd2 = models.CharField(max_length=128, verbose_name='약관2')
+    ckd3 = models.CharField(max_length=128, verbose_name='약관3')
+    ckd4 = models.CharField(max_length=128, verbose_name='약관4')
+    ckd5 = models.CharField(max_length=128, verbose_name='약관5')
 
 
     def get_absolute_url(self):
